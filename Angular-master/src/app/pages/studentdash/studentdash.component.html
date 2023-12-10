@@ -1,9 +1,9 @@
 <header class="app-header">
-    <h1>Admin login</h1>
+    <h1>Student login</h1>
   
     <nav class="header-nav">
       <ul>
-        <li><a >Update Student</a></li>
+        <li><a (click)="updatestudent(this.id)" >Update Student</a></li>
         <li><a >Fee Payment</a></li>
         <li><a >Apply Leave</a></li>
         <li (click)="logout()">logout</li>
@@ -15,3 +15,28 @@
     <!-- Your main content goes here -->
     
   </div>
+
+  <div class="app-container">
+    <!-- Your main content goes here -->
+    
+  </div>
+  
+  <table style="border-collapse: collapse; width: 100%; text-align: left;">
+    <tr style="background-color: #f2f2f2;">
+        <th style="padding: 10px; border: 1px solid #ddd;">Name</th>
+        <th style="padding: 10px; border: 1px solid #ddd;">Email</th>
+        
+        
+        <th style="padding: 10px; border: 1px solid #ddd;">Mobile Number</th>
+        <th style="padding: 10px; border: 1px solid #ddd;">Address</th>
+        <th style="padding: 10px; border: 1px solid #ddd;">Gender</th>
+    </tr>
+    <tr *ngFor="let user of userdata">
+    <td>{{user.name}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.mobileNumber}}</td>
+    <td>{{user.address}}</td>
+    <td>{{user.gender}}</td>
+    </tr>
+    <!-- Add your table data here -->
+</table>

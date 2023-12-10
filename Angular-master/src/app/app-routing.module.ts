@@ -5,11 +5,12 @@ import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { AddstudentComponent } from './pages/addstudent/addstudent.component';
 import { AddteacherComponent } from './pages/addteacher/addteacher.component';
 import { StudentdashComponent } from './pages/studentdash/studentdash.component';
+import { UpdateComponent } from './pages/update/update.component';
 
 
 const routes: Routes = [
   {
-    path:'login',
+    path:'',
     component:LoginComponent,
     pathMatch:'full'
   },
@@ -29,8 +30,13 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path :'studentdashboard',
+    path :'studentdash',
     component :StudentdashComponent,
+    pathMatch: 'full'
+  },
+  {
+    path :'update/:studentId',
+    component :UpdateComponent,
     pathMatch: 'full'
   }
  

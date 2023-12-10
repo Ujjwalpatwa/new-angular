@@ -17,14 +17,22 @@ export class LoginComponent {
   constructor(private loginservice : AdminloginService,private router : Router){}
   
   onSubmit() {
+   
+    
     this.loginservice.loginmethd(this.userdata).subscribe((data:any)=>{
       console.log(data);
-  
+      if(data.email=="rishu@gmail.com"){
       this.router.navigateByUrl('/welcome')
       this.loginservice.loginUser(data.jwtToken,data.id);
+      }
+      else{
+        this.router.navigateByUrl('/studentdash')
+        this.loginservice.loginUser(data.jwtToken,data.id);
+      }
     })
-    
   }
+
   
+} 
   
-}
+
