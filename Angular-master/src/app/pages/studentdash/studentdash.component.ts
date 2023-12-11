@@ -12,7 +12,7 @@ export class StudentdashComponent implements OnInit{
   id : any
   constructor(private studentlogin : StudentloginService, private router :Router){}
   ngOnInit() {
-   this.id= localStorage.getItem('id')
+    this.id= localStorage.getItem('id')
     this.studentlogin.studentloginmethod(this.id).subscribe((data)=>{
       this.userdata=data
       console.log(data);
@@ -26,4 +26,10 @@ export class StudentdashComponent implements OnInit{
     this.studentlogin.logout();
     this.router.navigateByUrl('/login')
   } 
+  feepayment(){
+    this.router.navigateByUrl('/feepayment')
+  }
+  studentleave(){
+    this.router.navigateByUrl('/leave')
+  }
 }

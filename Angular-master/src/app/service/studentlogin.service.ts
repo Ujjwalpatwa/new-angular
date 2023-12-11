@@ -44,6 +44,12 @@ export class StudentloginService {
   public updatestudentmethod(updateddata:any,custid:any){
     return this.http.put(`http://localhost:8080/api/student/update/${custid}`,updateddata)
   }
+  public payfeemethod(payfeedata : any){
+    return this.http.post("http://localhost:8080/api/student/payfee",payfeedata)
+  }
+  public leavemethod(leavedata : any){
+    return this.http.post("http://localhost:8080/api/student/applyleave",leavedata)
+  }
  /* public getToken(){
     return localStorage.getItem('token');
 

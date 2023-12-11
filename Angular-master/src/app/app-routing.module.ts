@@ -6,11 +6,13 @@ import { AddstudentComponent } from './pages/addstudent/addstudent.component';
 import { AddteacherComponent } from './pages/addteacher/addteacher.component';
 import { StudentdashComponent } from './pages/studentdash/studentdash.component';
 import { UpdateComponent } from './pages/update/update.component';
+import { FeepaymentComponent } from './pages/feepayment/feepayment.component';
+import { LeaveComponent } from './pages/leave/leave.component';
 
 
 const routes: Routes = [
   {
-    path:'',
+    path:'login',
     component:LoginComponent,
     pathMatch:'full'
   },
@@ -38,6 +40,16 @@ const routes: Routes = [
     path :'update/:studentId',
     component :UpdateComponent,
     pathMatch: 'full'
+  },
+  {
+    path :'feepayment',
+    component : FeepaymentComponent,
+    pathMatch: 'full'
+  },
+  {
+    path : 'leave',
+    component : LeaveComponent,
+    pathMatch : 'full'
   }
  
 ];

@@ -4,8 +4,8 @@
     <nav class="header-nav">
       <ul>
         <li><a (click)="updatestudent(this.id)" >Update Student</a></li>
-        <li><a >Fee Payment</a></li>
-        <li><a >Apply Leave</a></li>
+        <li><a (click)="feepayment()">Fee Payment</a></li>
+        <li><a (click)="studentleave()">Apply Leave</a></li>
         <li (click)="logout()">logout</li>
       </ul>
     </nav>
@@ -31,7 +31,7 @@
         <th style="padding: 10px; border: 1px solid #ddd;">Address</th>
         <th style="padding: 10px; border: 1px solid #ddd;">Gender</th>
     </tr>
-    <tr *ngFor="let user of userdata">
+    <tr *ngFor="let user of userdata ">
     <td>{{user.name}}</td>
     <td>{{user.email}}</td>
     <td>{{user.mobileNumber}}</td>
@@ -40,3 +40,4 @@
     </tr>
     <!-- Add your table data here -->
 </table>
+
